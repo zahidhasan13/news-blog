@@ -15,25 +15,25 @@ const Header = () => {
           <div className="flex items-center lg:order-2">
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-2xl hidden md:block"
             >
               <FaFacebook />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-2xl hidden md:block"
             >
               <FaLinkedin />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-2xl hidden md:block"
             >
               <FaTwitter />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-2xl hidden md:block"
             >
               <RiInstagramFill />
             </a>
