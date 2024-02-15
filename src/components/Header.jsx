@@ -8,35 +8,40 @@ const Header = () => {
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 shadow">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/">
-            <h3 className="self-center text-xl font-semibold whitespace-nowrap border-4 border-black px-2">
+            <h3 className="self-center text-xl font-semibold whitespace-nowrap border-2 border-black px-2">
               News Blog
             </h3>
           </Link>
           <div className="flex items-center lg:order-2">
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-xl"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
             >
               <FaFacebook />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-xl"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
             >
               <FaLinkedin />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-xl"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
             >
               <FaTwitter />
             </a>
             <a
               href="#"
-              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-xl"
+              className="text-gray-800 hover:text-orange-600 font-medium rounded-lg mr-2 text-3xl hidden md:block"
             >
               <RiInstagramFill />
             </a>
+            <Link to="/login">
+              <button className="px-3 py-1 border border-gray-800 font-bold hover:bg-gray-800 hover:text-white">
+                Login
+              </button>
+            </Link>
 
             <button
               data-collapse-toggle="mobile-menu-2"

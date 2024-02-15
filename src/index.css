@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 .active {
-  @apply text-black font-semibold text-orange-600;
+  @apply font-semibold text-orange-600;
 }
 .n-active {
   @apply text-black font-semibold;
