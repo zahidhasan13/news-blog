@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import BlogLists from "../../components/BlogLists";
+import useBlogs from "../../hooks/useBlogs";
 // eslint-disable-next-line react/prop-types
 const TabContent = ({ currentTab }) => {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    fetch("blogsData.json")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
-
+  const [blogs] = useBlogs();
   const blogCategory = blogs.filter((data) => data.category === currentTab);
 
   return (

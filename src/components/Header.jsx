@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { useContext, useState } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleLogOut = () => {
+    logOutUser()
+      .then(() => {})
+      .catch(() => {});
+  };
   return (
     <header>
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 shadow">
@@ -37,13 +46,23 @@ const Header = () => {
             >
               <RiInstagramFill />
             </a>
-            <Link to="/login">
-              <button className="px-3 py-1 border border-gray-800 font-bold hover:bg-gray-800 hover:text-white">
-                Login
+            {!user ? (
+              <Link to="/login">
+                <button className="px-3 py-1 border border-gray-800 font-bold hover:bg-gray-800 hover:text-white">
+                  Login
+                </button>
+              </Link>
+            ) : (
+              <button
+                onClick={handleLogOut}
+                className="px-3 py-1 border border-gray-800 font-bold hover:bg-gray-800 hover:text-white"
+              >
+                Log out
               </button>
-            </Link>
+            )}
 
             <button
+              onClick={() => setMenuOpen(!menuOpen)}
               data-collapse-toggle="mobile-menu-2"
               type="button"
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -78,7 +97,9 @@ const Header = () => {
             </button>
           </div>
           <div
-            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            className={`${
+              menuOpen ? "block" : "hidden"
+            } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -94,7 +115,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/blogs"
+                  to="/blog"
                   className={({ isActive }) =>
                     isActive ? "active" : "n-active"
                   }

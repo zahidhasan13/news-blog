@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BlogLists = ({ blog }) => {
-  const { title, image, published_date } = blog;
-  console.log(blog);
+  const { id, title, image, published_date } = blog;
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
       <a href="#">
@@ -14,7 +13,7 @@ const BlogLists = ({ blog }) => {
           Publish Date: {published_date}
         </p>
         <Link
-          to="/blogs/id"
+          to={`/blog/${id}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
         >
           Read more
