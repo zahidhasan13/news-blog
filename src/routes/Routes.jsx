@@ -2,9 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/Home/Home";
 import Blogs from "../pages/Blogs/Blogs";
-import BlogDetails from "../pages/BlogDetails/BlogDetails";
 import Login from "../pages/Login/Login";
 import SignUp from "../SignUp/SignUp";
+import BlogDetail from "../pages/BlogDetail/BlogDetail";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
-        path: "blog/:id",
-        element: <BlogDetails />,
+        path: "blogDetail/:id",
+        element: <BlogDetail />,
       },
     ],
   },

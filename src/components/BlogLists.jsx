@@ -13,7 +13,7 @@ const BlogLists = ({ blog }) => {
           Publish Date: {published_date}
         </p>
         <Link
-          to={`/blog/${id}`}
+          to={`/blogDetail/${id}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
         >
           Read more

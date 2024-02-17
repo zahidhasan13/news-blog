@@ -1,4 +1,5 @@
 import Hero from "../../components/Hero";
+import useBlogs from "../../hooks/useBlogs";
 
 const Home = () => {
   return (
