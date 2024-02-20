@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/">
             <h3 className="self-center text-xl font-semibold whitespace-nowrap border-2 border-black px-2">
-              News Blog
+              Blog Site
             </h3>
           </Link>
           <div className="flex items-center lg:order-2">
@@ -121,16 +121,6 @@ const Header = () => {
                   }
                 >
                   Blogs
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/category"
-                  className={({ isActive }) =>
-                    isActive ? "active" : "n-active"
-                  }
-                >
-                  Category
                 </NavLink>
               </li>
             </ul>

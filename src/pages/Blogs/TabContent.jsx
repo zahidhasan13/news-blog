@@ -4,6 +4,7 @@ import useBlogs from "../../hooks/useBlogs";
 // eslint-disable-next-line react/prop-types
 const TabContent = ({ currentTab }) => {
   const [blogs] = useBlogs();
+
   const blogCategory = blogs.filter((data) => data.category === currentTab);
   const itemPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,7 +13,6 @@ const TabContent = ({ currentTab }) => {
   const blog = blogs.slice(firstIndex, lastIndex);
   const numberOfPages = Math.ceil(blogs.length / itemPerPage);
   const pageNumber = [...Array(numberOfPages + 1).keys()].slice(1, lastIndex);
-  console.log(blog);
 
   const handlePagination = (page) => setCurrentPage(page);
   const handlePrev = (page) => {
